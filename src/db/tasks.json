@@ -16,17 +16,12 @@
       "description": "fazer o café da manhã"
     },
     {
-      "id": "a0c6ec22-4c14-4e53-8f9b-0ce218e4398f",
+      "id": "eb3d55f3-e80c-4c7f-a90f-511986909e20",
       "title": "Lavar a louça",
-      "description": "fazer depois"
-    },
-    {
-      "id": "6d8cadc8-7d2e-412c-b2d4-e2a340b15525",
-      "title": "Lavar a louça",
-      "description": "fazer depois"
+      "description": "World!"
     }
   ],
   "completed": {
-    "quantity": 12
+    "quantity": 15
   }
 }
