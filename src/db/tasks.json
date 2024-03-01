@@ -19,14 +19,9 @@
       "id": "5",
       "title": "Café da manhã",
       "description": "fazer o café da manhã"
-    },
-    {
-      "id": "fghfgh",
-      "title": "Café da manhã",
-      "description": "fazer o café da manhã"
     }
   ],
   "completed": {
-    "quantity": 4
+    "quantity": 5
   }
 }
