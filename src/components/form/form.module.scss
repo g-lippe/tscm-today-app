@@ -1,0 +1,57 @@
+@import '../../styleVariables.scss';
+
+form {
+  background-color: $white05;
+  border-radius: 10px;
+  padding: 16px;
+
+  h3 {
+    margin: 0 0 16px 0;
+    text-align: center;
+  }
+
+  input {
+    background-color: $white05;
+    border-style: none;
+    border-radius: 10px;
+    width: 100%;
+    height: 42px;
+    padding-left: 8px;
+    -webkit-box-sizing: border-box;
+
+  }
+
+  .cont_input {
+    padding: 0 8px;
+
+
+    p,
+    input {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 12px;
+      font-family: Poppins, sans-serif;
+      color: #fff;
+    }
+
+    input::placeholder {
+      color: $white60;
+    }
+  }
+
+
+  button {
+    font-family: Poppins, sans-serif;
+    border-radius: 10px;
+    border-style: none;
+    border-radius: 5px;
+    color: $app_grey;
+    background-color: #fff;
+    width: 100%;
+    height: 42px;
+    margin-top: 16px;
+
+  }
+
+
+}
