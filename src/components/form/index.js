@@ -19,10 +19,11 @@ export default function TaskForm() {
       taskName: '',
       taskDescr: ''
     },
-    onSubmit: (values) => (
-      // console.log('Submitted: ', values)
+    onSubmit: (values) => {
       addTarefaMutation.mutate({ id: crypto.randomUUID(), title: values.taskName, description: values.taskDescr, datestamp:data.toLocaleDateString("en-gb", options) })
-    )
+      values.taskName = ''
+      values.taskDescr = ''
+    }
   })
 
   // Definir formato da data
@@ -48,6 +49,7 @@ export default function TaskForm() {
           placeholder="Give the task a name"
           onChange={formik.handleChange}
           value={formik.values.taskName}
+          maxlength="50"
           required
         />
 
@@ -59,6 +61,7 @@ export default function TaskForm() {
           placeholder="Give the task a description"
           onChange={formik.handleChange}
           value={formik.values.taskDescr}
+          maxlength="150"
           required
         />
         
