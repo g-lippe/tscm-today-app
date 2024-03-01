@@ -3,8 +3,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from "axios";
 import styles from './form.module.scss';
 
-
-
 export default function TaskForm() {
   const queryClient = useQueryClient()
 
@@ -23,32 +21,42 @@ export default function TaskForm() {
     },
     onSubmit: (values) => (
       // console.log('Submitted: ', values)
-      addTarefaMutation.mutate({ id: crypto.randomUUID(), title: values.taskName, description: values.taskDescr })
+      addTarefaMutation.mutate({ id: crypto.randomUUID(), title: values.taskName, description: values.taskDescr, datestamp:data.toLocaleDateString("en-gb", options) })
     )
   })
+
+  // Definir formato da data
+  const data = new Date()
+  const options = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
 
   return (
     <form onSubmit={formik.handleSubmit}>
       <h3> Add new to do </h3>
       <div className={styles.cont_input}>
-        <label>Task Name: </label>
+        <label htmlFor='taskName'>Task Name : </label>
         <input
           id="taskName"
           name="taskName"
           type="text"
-          // placeholder="Nome da tarefa"
-          placeholder="Placeholder"
+          placeholder="Give the task a name"
           onChange={formik.handleChange}
           value={formik.values.taskName}
           required
         />
 
-        <label>Task description: </label>
+        <label htmlFor='taskDescr'>Task description : </label>
         <input
           id="taskDescr"
           name="taskDescr"
           type="text"
-          placeholder="Descrição da tarefa"
+          placeholder="Give the task a description"
           onChange={formik.handleChange}
           value={formik.values.taskDescr}
           required
@@ -56,7 +64,6 @@ export default function TaskForm() {
         
         <button type="submit">Create Todo</button>
       </div>
-
 
       <div>
         {addTarefaMutation.isPending && <h6>Adding task...</h6>}

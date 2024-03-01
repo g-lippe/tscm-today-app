@@ -12,7 +12,7 @@ export function useChuckNorris() {
   const { isLoading, error, data } = useQuery({
     queryKey: ['norris-joke'],
     queryFn: fetchData,
-    // refetchInterval: 5000
+    refetchInterval: 5000
   })
 
   if (isLoading) return 'Loading...'

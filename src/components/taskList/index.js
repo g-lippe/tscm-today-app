@@ -4,7 +4,6 @@ import axios from "axios";
 import styles from './tasklist.module.scss';
 import CloseIcon from './closeIcon';
 
-
 export default function TaskList({ total_completed }) {
   const queryClient = useQueryClient()
   const { task_data, isLoading, isError } = useTasks()
@@ -30,28 +29,25 @@ export default function TaskList({ total_completed }) {
     onSuccess: () => { queryClient.invalidateQueries(['get-completed']) }
   })
 
-  const data = new Date()
-  const options = {
-    day: 'numeric',
-    month: 'long',
-    year: 'numeric',
-    hour: '2-digit',
-    minute: '2-digit',
-    hour12: true,
-  };
-
   return (
     <div className={styles.task_list}>
+
       {task_data && task_data.map(task => (
+
         <div key={task.id} className={styles.task}>
           <h4>{task.title}</h4>
+
           <div className={styles.task_descr}>
             <p>{task.description}</p>
-            <p>{data.toLocaleDateString("en-gb", options)}</p>
+            <p>{task.datestamp}</p>
           </div>
+
           <CloseIcon styles={styles} size={'20'} func={() => delTarefaMutation.mutate(task.id)} />
         </div>
+
       ))}
+
+      {task_data && task_data.length < 1 && <h2>All done! No tasks remaining</h2>}
 
       {isLoading && 'Carregando Tarefas...'}
 

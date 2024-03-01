@@ -1,12 +1,16 @@
 @import '../../styleVariables.scss';
 
-
 .task_list {
   height: 100%;
   overflow-y: scroll;
   padding: 8px;
-  max-height: 355px;
+  max-height: 407px;
 
+  h2 {
+    font-style: italic;
+    color: $white60;
+    font-weight: 300;
+  }
 
   h3 {
     font-size: 20px;
@@ -20,12 +24,20 @@
     border-radius: 10px;
     margin-bottom: 16px;
     padding: 16px;
+    transition: 0.2s;
 
     h4,
     p {
       margin: 0;
     }
 
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+    }
 
     .icon_close {
       position: absolute;
@@ -41,8 +53,11 @@
       justify-content: space-between;
     }
 
-  }
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.12);
+    }
 
+  }
 }
 
 .task_list::-webkit-scrollbar {
