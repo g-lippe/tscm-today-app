@@ -10,19 +10,6 @@ function App() {
   const { tasks_completed, isLoading, isError } = useTasksCompleted();
 
 
-
-
-  console.log(tasks_completed)
-
-
-  const str1 = '5';
-
-  console.log(str1.padStart(2, '0'));
-
-
-
-
-
   return (
     <div className="App">
       <div className='header'>
