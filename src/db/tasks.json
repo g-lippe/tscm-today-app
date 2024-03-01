@@ -1,0 +1,17 @@
+{
+    "tasks": [
+      {
+        "id": "1",
+        "title": "Café da manhã",
+        "description": "fazer o café da manhã"
+      },
+      {
+        "id": "2352efb3-7d15-40c4-ba30-e945c1baabdc",
+        "title": "Arrumar as roupas",
+        "description": "para ajudar seus pais"
+      }
+    ],
+    "completed": {
+      "quantity": 0
+    }
+  }
