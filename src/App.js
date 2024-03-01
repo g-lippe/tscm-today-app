@@ -6,8 +6,7 @@ import { useTasksCompleted } from './hooks/useTasksCompleted';
 
 function App() {
   const data_joke = useChuckNorris();
-  const { tasks_completed, isLoading, isError } = useTasksCompleted();
-
+  const { tasks_completed } = useTasksCompleted();
 
   return (
     <div className="App">
@@ -19,9 +18,7 @@ function App() {
 
         <div className='cont_todo'>
           <h3>To do</h3>
-          {tasks_completed && <TaskList total_completed={tasks_completed} /> }
-          {isLoading && <p>Loading...</p> }
-          {isError && <p>Error</p> }
+          <TaskList total_completed={tasks_completed} />
         </div>
 
         <div className='cont_right'>

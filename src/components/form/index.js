@@ -21,15 +21,26 @@ export default function TaskForm() {
     },
     onSubmit: (values) => (
       // console.log('Submitted: ', values)
-      addTarefaMutation.mutate({ id: crypto.randomUUID(), title: values.taskName, description: values.taskDescr })
+      addTarefaMutation.mutate({ id: crypto.randomUUID(), title: values.taskName, description: values.taskDescr, datestamp:data.toLocaleDateString("en-gb", options) })
     )
   })
+
+  // Definir formato da data
+  const data = new Date()
+  const options = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
 
   return (
     <form onSubmit={formik.handleSubmit}>
       <h3> Add new to do </h3>
       <div className={styles.cont_input}>
-        <label for='taskName'>Task Name : </label>
+        <label htmlFor='taskName'>Task Name : </label>
         <input
           id="taskName"
           name="taskName"
@@ -40,7 +51,7 @@ export default function TaskForm() {
           required
         />
 
-        <label for='taskDescr'>Task description : </label>
+        <label htmlFor='taskDescr'>Task description : </label>
         <input
           id="taskDescr"
           name="taskDescr"
