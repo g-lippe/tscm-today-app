@@ -4,7 +4,6 @@ import axios from "axios";
 import styles from './tasklist.module.scss';
 import CloseIcon from './closeIcon';
 
-
 export default function TaskList({ total_completed }) {
   const queryClient = useQueryClient()
   const { task_data, isLoading, isError } = useTasks()
@@ -47,7 +46,7 @@ export default function TaskList({ total_completed }) {
 
         <div key={task.id} className={styles.task}>
           <h4>{task.title}</h4>
-          
+
           <div className={styles.task_descr}>
             <p>{task.description}</p>
             <p>{data.toLocaleDateString("en-gb", options)}</p>

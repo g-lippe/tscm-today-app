@@ -3,8 +3,6 @@ import { useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from "axios";
 import styles from './form.module.scss';
 
-
-
 export default function TaskForm() {
   const queryClient = useQueryClient()
 
@@ -55,7 +53,6 @@ export default function TaskForm() {
         
         <button type="submit">Create Todo</button>
       </div>
-
 
       <div>
         {addTarefaMutation.isPending && <h6>Adding task...</h6>}

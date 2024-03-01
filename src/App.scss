@@ -10,7 +10,6 @@
   position: relative;
   height: 90vh;
 
-
   h1 {
     font-size: 56px;
     margin: 0;
@@ -81,6 +80,11 @@
       font-style: italic;
       margin-top: 0;
     }
+
+    a {
+      text-decoration: none;
+      color: $white60;
+    }
   }
 
   .cont_signature {
@@ -92,7 +96,6 @@
   }
 
 }
-
 
 body {
   background-color: $app_grey;
