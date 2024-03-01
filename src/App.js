@@ -1,6 +1,21 @@
 import './App.scss';
+import { useChuckNorris } from './hooks/useChuckNorris';
+
 
 function App() {
+  const data_joke = useChuckNorris();
+
+
+
+  console.log(data_joke)
+
+
+
+
+
+
+
+
   return (
     <div className="App">
       <div className='header'>
@@ -38,10 +53,17 @@ function App() {
         </div>
 
       </div>
-      <div>
-        <p>"Chuck Norris Phrase"</p>
-        <p>By Chuck Norris</p>
-      </div>
+
+      
+
+      { data_joke.isLoading && <h1>Loading...</h1> }
+      { data_joke.isError && <pre>{JSON.stringify(data_joke.error)}</pre> }
+      {data_joke &&
+        <div className='cont_joke'>
+          <p>"{data_joke}"</p>
+          <span><strong>By api.chucknorris.io</strong></span>
+        </div>
+      }
 
     </div>
   );
