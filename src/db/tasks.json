@@ -1,0 +1,25 @@
+{
+  "tasks": [
+    {
+      "id": "37d72543-d22a-44fe-91aa-0ab5b6e5a39e",
+      "title": "Test the applicant program",
+      "description": "also review his code",
+      "datestamp": "1 March 2024 at 03:02 pm"
+    },
+    {
+      "id": "f6358e6b-8a48-46bb-b2bc-50ca1bc51b9d",
+      "title": "Wash the dishes",
+      "description": "after lunch",
+      "datestamp": "1 March 2024 at 03:15 pm"
+    },
+    {
+      "id": "7669a7fd-8bec-4fb1-9fb5-410388a0c192",
+      "title": "Review pull requests",
+      "description": "check if there are no conficts",
+      "datestamp": "1 March 2024 at 03:45 pm"
+    }
+  ],
+  "completed": {
+    "quantity": 0
+  }
+}
