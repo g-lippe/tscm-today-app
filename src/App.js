@@ -13,16 +13,16 @@ function App() {
   return (
     <div className="App">
 
-      <div className='title'>
-        <h1>To<span>day</span></h1>
-        <p>Wake up , go ahead , do the thing not tomorrow, do <strong>to</strong>day.</p>
-      </div>
+      <h1>To<span>day</span></h1>
+      <p>Wake up , go ahead , do the thing not tomorrow, do <strong>to</strong>day.</p>
 
       <div className='cont_main'>
-        
+
         <div className='cont_todo'>
           <h3>To do</h3>
-          <TaskList total_completed={tasks_completed} />
+          {tasks_completed && <TaskList total_completed={tasks_completed} /> }
+          {isLoading && <p>Loading...</p> }
+          {isError && <p>Error</p> }
         </div>
 
         <div className='cont_right'>
@@ -36,7 +36,7 @@ function App() {
 
         </div>
       </div>
-    
+
       {data_joke.isLoading && <h1>Loading...</h1>}
 
       {data_joke.isError && <pre>{JSON.stringify(data_joke.error)}</pre>}

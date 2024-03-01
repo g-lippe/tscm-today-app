@@ -31,7 +31,7 @@ export default function TaskForm() {
     <form onSubmit={formik.handleSubmit}>
       <h3> Add new to do </h3>
       <div className={styles.cont_input}>
-        <label>Task Name: </label>
+        <label for='taskName'>Task Name: </label>
         <input
           id="taskName"
           name="taskName"
@@ -42,7 +42,7 @@ export default function TaskForm() {
           required
         />
 
-        <label>Task description: </label>
+        <label for='taskDescr'>Task description: </label>
         <input
           id="taskDescr"
           name="taskDescr"

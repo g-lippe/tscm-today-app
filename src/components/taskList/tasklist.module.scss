@@ -5,7 +5,7 @@
   height: 100%;
   overflow-y: scroll;
   padding: 8px;
-  max-height: 355px;
+  max-height: 407px;
 
   h2 {
     font-style: italic;
@@ -24,10 +24,19 @@
     border-radius: 10px;
     margin-bottom: 16px;
     padding: 16px;
+    transition: 0.2s;
 
     h4,
     p {
       margin: 0;
+    }
+
+    h4 {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
     }
 
 
@@ -43,6 +52,10 @@
       flex-direction: row;
       color: $white60;
       justify-content: space-between;
+    }
+
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.2);
     }
 
   }
