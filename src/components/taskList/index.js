@@ -32,12 +32,12 @@ export default function TaskList({ total_completed }) {
 
 
   return (
-    <div className={'task_list'}>
+    <div className={styles.task_list}>
       {task_data && task_data.map(task => (
-        <div key={task.id} className='task'>
+        <div key={task.id} className={styles.task}>
           <h4>{task.title}</h4>
           <p>{task.description}</p>
-          <CloseIcon size={'20'}/>
+          <CloseIcon styles={styles} size={'20'} func={() => delTarefaMutation.mutate(task.id)}/>
         </div>
       ))}
 

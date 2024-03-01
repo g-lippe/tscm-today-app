@@ -20,7 +20,6 @@ function App() {
       <div className='cont_main'>
         <div className='cont_tasks'>
           <h3>To do</h3>
-
           <TaskList total_completed={tasks_completed} />
 
         </div>
@@ -33,7 +32,6 @@ function App() {
 
           <div className='cont_form'>
             <h3> Add new to do </h3>
-
           </div>
         </div>
 
