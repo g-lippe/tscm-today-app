@@ -1,27 +1,6 @@
 {
-  "tasks": [
-    {
-      "id": "1",
-      "title": "Café da manhã",
-      "description": "fazer o café da manhã"
-    },
-    {
-      "id": "2",
-      "title": "Café da manhã",
-      "description": "fazer o café da manhã"
-    },
-    {
-      "id": "3",
-      "title": "Café da manhã",
-      "description": "fazer o café da manhã"
-    },
-    {
-      "id": "eb3d55f3-e80c-4c7f-a90f-511986909e20",
-      "title": "Lavar a louça",
-      "description": "World!"
-    }
-  ],
+  "tasks": [],
   "completed": {
-    "quantity": 15
+    "quantity": 0
   }
 }
