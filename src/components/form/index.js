@@ -30,20 +30,19 @@ export default function TaskForm() {
   return (
     <form onSubmit={formik.handleSubmit}>
       <h3> Add new to do </h3>
-      <div>
+      <div className={styles.cont_input}>
         <label>Task Name: </label>
         <input
           id="taskName"
           name="taskName"
           type="text"
-          placeholder="Nome da tarefa"
+          // placeholder="Nome da tarefa"
+          placeholder="Placeholder"
           onChange={formik.handleChange}
           value={formik.values.taskName}
           required
         />
-      </div>
 
-      <div>
         <label>Task description: </label>
         <input
           id="taskDescr"
@@ -54,11 +53,10 @@ export default function TaskForm() {
           value={formik.values.taskDescr}
           required
         />
+        
+        <button type="submit">Create Todo</button>
       </div>
 
-      <div>
-        <button type="submit">Add Task</button>
-      </div>
 
       <div>
         {addTarefaMutation.isPending && <h6>Adding task...</h6>}
