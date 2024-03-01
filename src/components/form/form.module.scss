@@ -1,0 +1,13 @@
+@import '../../styleVariables.scss';
+
+form {
+  background-color: $white05;
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+
+  h3 {
+    margin: 0 0 16px 0;
+  }
+
+}
