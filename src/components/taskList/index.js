@@ -42,16 +42,23 @@ export default function TaskList({ total_completed }) {
 
   return (
     <div className={styles.task_list}>
+
       {task_data && task_data.map(task => (
+
         <div key={task.id} className={styles.task}>
           <h4>{task.title}</h4>
+          
           <div className={styles.task_descr}>
             <p>{task.description}</p>
             <p>{data.toLocaleDateString("en-gb", options)}</p>
           </div>
+
           <CloseIcon styles={styles} size={'20'} func={() => delTarefaMutation.mutate(task.id)} />
         </div>
+
       ))}
+
+      {task_data && task_data.length < 1 && <h2>All done! No tasks remaining</h2>}
 
       {isLoading && 'Carregando Tarefas...'}
 

@@ -19,18 +19,21 @@ function App() {
       </div>
 
       <div className='cont_main'>
+        
         <div className='cont_todo'>
           <h3>To do</h3>
           <TaskList total_completed={tasks_completed} />
         </div>
 
         <div className='cont_right'>
+
           <div className='finished'>
             <h3> Finished tasks quantity </h3>
             <h1>{String(tasks_completed).padStart(2, '0')}</h1>
           </div>
 
           <TaskForm />
+
         </div>
       </div>
     

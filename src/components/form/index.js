@@ -36,8 +36,7 @@ export default function TaskForm() {
           id="taskName"
           name="taskName"
           type="text"
-          // placeholder="Nome da tarefa"
-          placeholder="Placeholder"
+          placeholder="Give the task a name"
           onChange={formik.handleChange}
           value={formik.values.taskName}
           required
@@ -48,7 +47,7 @@ export default function TaskForm() {
           id="taskDescr"
           name="taskDescr"
           type="text"
-          placeholder="Descrição da tarefa"
+          placeholder="Give the task a description"
           onChange={formik.handleChange}
           value={formik.values.taskDescr}
           required
