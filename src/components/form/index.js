@@ -71,7 +71,6 @@ export default function TaskForm() {
       <div>
         {addTarefaMutation.isPending && <h6>Adding task...</h6>}
         {addTarefaMutation.isError && <div>An error occurred: {addTarefaMutation.error.message}</div>}
-        {/* {addTarefaMutation.isSuccess && <h6>Adding task...</h6>} */}
       </div>
 
     </form>
