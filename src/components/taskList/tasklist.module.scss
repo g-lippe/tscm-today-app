@@ -21,12 +21,18 @@
       margin: 0;
     }
 
-
     .icon_close {
       position: absolute;
       top: -8px;
       right: -8px;
       width: 20px;
+    }
+
+    .task_descr {
+      display: flex;
+      flex-direction: row;
+      color: $white60;
+      justify-content: space-between;
     }
 
   }

@@ -30,14 +30,26 @@ export default function TaskList({ total_completed }) {
     onSuccess: () => { queryClient.invalidateQueries(['get-completed']) }
   })
 
+  const data = new Date()
+  const options = {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: true,
+  };
 
   return (
     <div className={styles.task_list}>
       {task_data && task_data.map(task => (
         <div key={task.id} className={styles.task}>
           <h4>{task.title}</h4>
-          <p>{task.description}</p>
-          <CloseIcon styles={styles} size={'20'} func={() => delTarefaMutation.mutate(task.id)}/>
+          <div className={styles.task_descr}>
+            <p>{task.description}</p>
+            <p>{data.toLocaleDateString("en-gb", options)}</p>
+          </div>
+          <CloseIcon styles={styles} size={'20'} func={() => delTarefaMutation.mutate(task.id)} />
         </div>
       ))}
 
