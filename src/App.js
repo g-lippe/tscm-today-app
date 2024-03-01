@@ -1,4 +1,5 @@
 import './App.scss';
+import TaskForm from './components/form';
 import TaskList from './components/taskList';
 import { useChuckNorris } from './hooks/useChuckNorris';
 import { useTasksCompleted } from './hooks/useTasksCompleted';
@@ -25,14 +26,14 @@ function App() {
         </div>
 
         <div className='cont_right'>
+
           <div className='finished'>
             <h3> Finished tasks quantity </h3>
             <h1>{String(tasks_completed).padStart(2, '0')}</h1>
           </div>
 
-          <div className='cont_form'>
-            <h3> Add new to do </h3>
-          </div>
+          <TaskForm />
+
         </div>
 
       </div>
